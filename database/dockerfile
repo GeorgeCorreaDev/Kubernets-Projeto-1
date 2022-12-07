@@ -1,0 +1,10 @@
+FROM mysql:5.7
+
+WORKDIR /ver/lib/mysql/
+
+ENV MYSQL_ROOT_PASSWORD=password@6
+
+ENV MYSQL_DATABASE=myfortnox
+ADD sql.sql /doker-entrypoint-initdb.doker
+
+EXPOSE 3306
